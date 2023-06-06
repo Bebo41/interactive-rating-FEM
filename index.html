@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Overpass&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background: black;
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Overpass', sans-serif;
+    }
+    .con {
+      color:black;
+    }
+    .con1 {
+      background: rgb(41, 41, 53);
+      border: 1px solid rgb(41, 41, 53);
+      border-radius: 5%;
+      margin: 100px 400px 100px 400px;
+      padding: 10px 30px 10px 30px;
+    }
+    .con2 {
+      background: rgb(41, 41, 53);
+      border: 1px solid rgb(41, 41, 53);
+      border-radius: 5%;
+      margin: 100px 400px 100px 400px;
+      padding: 10px 30px 10px 30px;
+      text-align: center;
+      display: all;
+    }
+    p {
+      color: rgb(170, 170, 170);
+    }
+    h3 {
+      color: white;
+    }
+    .submit {
+    background: orange;
+    padding: 10px 120px 10px 120px;
+    border: 1px solid orange;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    }
+    button, .button {
+      background:rgb(77, 77, 95);
+      border: solid 1px rgb(77, 77, 95);
+      border-radius: 40px;
+      color:rgb(184, 184, 184);
+      padding: 17px;
+      text-align: center;
+      margin: 2px;
+    }
+    .image {
+      background:rgb(77, 77, 95);
+      border: solid 1px rgb(77, 77, 95);
+      border-radius: 100%;
+      padding: 12px;
+    }
+    h4 {
+      color: orange;
+      background:rgb(77, 77, 95);
+      border: solid 1px rgb(77, 77, 95);
+      border-radius: 20px;
+      padding-top: 4px;
+    }
+    h2 {
+      color: white;
+    }
+    .clicked {
+      background: orange;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div class="con1">
+    <img class="image" src="file:///C:/Users/Smart%20Computer/Downloads/Compressed/interactive-rating-component-main/interactive-rating-component-main/images/icon-star.svg">
+  <h3>How did we do?</h3>
+
+  <p>Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p>
+
+  <button id="but1" onclick="rate1() ">1</button>
+  <button id="but2" onclick="rate2() ">2</button>
+  <button id="but3" onclick="rate3() ">3</button>
+  <button id="but4" onclick="rate4() ">4</button>
+  <button id="but5" onclick="rate5() ">5</button><br><br>
+  <button class="submit" onClick="bebo() ">Submit</button>
+</div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+<div id="thanks" class="hidden">
+  <img src = "file:///C:/Users/Smart%20Computer/Downloads/Compressed/interactive-rating-component-main/interactive-rating-component-main/images/illustration-thank-you.svg">
+  <h4 id="par">You selected <!-- Add rating here --> out of 5</h4>
+
+  <h2>Thank you!</h2>
+
+  <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
+  </div>
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/bebo41" target="_blank">Bebo</a>.
+  </div>
+  <!--WTF is written under this-->
+  <script>
+    var par = document.getElementById("par");
+    var but1 = document.getElementById("but1");
+    var but2 = document.getElementById("but2");
+    var but3 = document.getElementById("but3");
+    var but4 = document.getElementById("but4");
+    var but5 = document.getElementById("but5");
+    function rate1(){
+      console.log("passed1")
+      par.innerHTML = "You selected rating 1 out of 5";
+      but1.setAttribute("class", "clicked");
+      but2.setAttribute("class", "button");
+      but3.setAttribute("class", "button");
+      but4.setAttribute("class", "button");
+      but5.setAttribute("class", "button");
+    }
+    function rate2(){
+      console.log("passed2")
+      par.innerHTML = "You selected rating 2 out of 5";
+      but1.setAttribute("class", "button");
+      but2.setAttribute("class", "clicked");
+      but3.setAttribute("class", "button");
+      but4.setAttribute("class", "button");
+      but5.setAttribute("class", "button");
+    }
+    function rate3(){
+      console.log("passed3")
+      par.innerHTML = "You selected rating 3 out of 5";
+      but1.setAttribute("class", "button");
+      but2.setAttribute("class", "button");
+      but3.setAttribute("class", "clicked");
+      but4.setAttribute("class", "button");
+      but5.setAttribute("class", "button");
+    }
+    function rate4(){
+      console.log("passed4")
+      par.innerHTML = "You selected rating 4 out of 5";
+      but1.setAttribute("class", "button");
+      but2.setAttribute("class", "button");
+      but3.setAttribute("class", "button");
+      but4.setAttribute("class", "clicked");
+      but5.setAttribute("class", "button");
+    }
+    function rate5(){
+      console.log("passed5")
+      par.innerHTML = "You selected rating 5 out of 5";
+      but1.setAttribute("class", "button");
+      but2.setAttribute("class", "button");
+      but3.setAttribute("class", "button");
+      but4.setAttribute("class", "button");
+      but5.setAttribute("class", "clicked");
+    };
+    var thanks = document.querySelector("#thanks");//doesn't work if it was getElementById
+    function bebo() {
+      console.log("runned");
+      thanks.setAttribute("class", "con2");
+    }
+  </script>
+</body>
+</html>
